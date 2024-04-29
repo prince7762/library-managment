@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body{
+            background-image:url("lib.jpg");
+            background-size:cover;
+            background-repeat:no-repeat;
+           background-position:center;
+           height:100vh;
+         //  width:100%; 
+                  
+        }
+        #dropdownDefaultButton {
+            height: 43px;
+        }
+        .auto-style1 {
+            color: #000000;
+        }
+        span{
+            color:black;
+        }
+       /* .Header1{
+            background-color:orangered;
+        }*/
+       .lib{
+           background-color:pink;
+       }
+    </style>
+
+</head>
+<body>
+       <form id="form1" runat="server">
+    <header class="text-gray-600 body-font">
+         <div class="lib">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">  
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" BackColor="#006699" ForeColor="White">
+            <asp:ListItem>Book</asp:ListItem>
+            <asp:ListItem Value="~/AddBook.aspx">Add Book</asp:ListItem>
+            <asp:ListItem Value="~/AllBook.aspx">All Book</asp:ListItem>
+            <asp:ListItem Value="~/SearchBook.aspx">Search Book</asp:ListItem>
+            <asp:ListItem Value="~/Delete_Book.aspx">Delete Book</asp:ListItem>
+        </asp:DropDownList>
+       &nbsp; <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" BackColor="#006699" ForeColor="White">
+            <asp:ListItem>Student</asp:ListItem>
+            <asp:ListItem Value="~/Add_Student.aspx">AddStudent</asp:ListItem>
+            <asp:ListItem Value="~/All_Student.aspx">AllStudents</asp:ListItem>
+            <asp:ListItem Value="~/Search_Student.aspx">SearchStudent</asp:ListItem>
+        </asp:DropDownList>
+        &nbsp;<asp:DropDownList ID="DropDownList3" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged" BackColor="#006699" ForeColor="White">
+            <asp:ListItem>BookIssue</asp:ListItem>
+            <asp:ListItem Value="~/IssueBook.aspx">IssueBook</asp:ListItem>
+            <asp:ListItem Value="~/SubmitBook.aspx">SubmitBook</asp:ListItem>
+        </asp:DropDownList>
+        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Login.aspx"><span>LOGOUT</span></asp:HyperLink>
+    </nav>
+      <span class="auto-style1">LIBRARY</span><div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0"></div>
+  </div>
+             </div>
+</header>
+    <div> 
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form> 
+</body>
+</html>
+

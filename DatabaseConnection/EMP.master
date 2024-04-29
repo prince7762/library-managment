@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="EMP.master.cs" Inherits="EMP" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body{
+            background-image:url("emp1.png");
+        }
+        .Emp{
+            background-color:pink;
+        }
+        span{
+            color:black;
+        }
+       
+    </style>
+</head>
+<body>
+  <header class="text-gray-600 body-font">
+      <div class="Emp">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+     
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-pink-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <!--<span class="ml-3 text-xl">Tailblocks</span> -->
+    </a>
+    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+          
+        <asp:HyperLink ID="HyperLink1" CssClass="mr-5 hover:text-gray-900" runat="server" NavigateUrl="~/EHome.aspx" ForeColor="Black">Home</asp:HyperLink>
+     
+        &nbsp;
+     
+        <asp:HyperLink ID="HyperLink2" CssClass="mr-5 hover:text-gray-900" runat="server" NavigateUrl="~/Add_employee.aspx" ForeColor="Black">Add Employee</asp:HyperLink>
+      
+        &nbsp;
+      
+        <asp:HyperLink ID="HyperLink3" CssClass="mr-5 hover:text-gray-900" runat="server" NavigateUrl="~/All_employee.aspx" ForeColor="Black">All Employee</asp:HyperLink>
+     
+        &nbsp;
+     
+        <asp:HyperLink ID="HyperLink4" CssClass="mr-5 hover:text-gray-900" runat="server" NavigateUrl="~/search_employee.aspx" ForeColor="Black">Search Employee</asp:HyperLink>
+
+        &nbsp;<asp:HyperLink ID="HyperLink5" CssClass="mr-5 hover:text-gray-900" runat="server" NavigateUrl="~/Delete_employee.aspx" ForeColor="Black">Delete Employee</asp:HyperLink>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/EMPLogin.aspx"><span>LOGOUT</span></asp:HyperLink>
+    </nav>
+   <!-- <button  class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >Logout<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+      
+       
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button> -->
+  </div>
+      </div>
+</header>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   <!-- </div>
+    </form> -->
+  <!--<script>
+          <button onclick="dark()">DarkMode</button>
+          <button onclick="light()">LightMode</button>
+        function dark() {
+            document.querySelector('html').style.colorScheme = 'dark'
+        }
+        function light() {
+            document.querySelector('html').style.colorScheme = 'light'
+        }
+    </script>
+      -->
+</body>
+</html>
